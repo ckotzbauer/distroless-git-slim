@@ -51,7 +51,7 @@ jobs:
       env:
         SLACK_ICON: http://github.com/chainguardian.png?size=48
         SLACK_USERNAME: chainguardian
-        SLACK_WEBHOOK: ${{ secrets.DISTROLESS_SLACK_WEBHOOK }}
+        SLACK_WEBHOOK: ${{ secrets.VULNS_SLACK_WEBHOOK }}
         SLACK_CHANNEL: distroless-alerts
         SLACK_COLOR: '#8E1600'
         MSG_MINIMAL: 'true'
