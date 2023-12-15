@@ -29,7 +29,7 @@ jobs:
         config: apko.yaml
         tag: template:${{ steps.snapshot-date.outputs.date }}
 
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: template.tar
         path: ./output.tar
