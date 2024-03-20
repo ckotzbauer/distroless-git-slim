@@ -47,7 +47,7 @@ jobs:
 
     # Post to slack when things fail.
     - if: ${{ failure() }}
-      uses: rtCamp/action-slack-notify@v2.2.1
+      uses: rtCamp/action-slack-notify@v2.3.0
       env:
         SLACK_ICON: http://github.com/chainguardian.png?size=48
         SLACK_USERNAME: chainguardian
@@ -103,7 +103,7 @@ jobs:
         echo "Trivy Count: $TRIVY_COUNT" >> $GITHUB_STEP_SUMMARY
 
     - if: ${{ steps.scans.outputs.TRIVY_COUNT != '0' || steps.scans.outputs.GRYPE_COUNT != '0' || steps.scans.outputs.SNYK_COUNT != '0'  }}
-      uses: rtCamp/action-slack-notify@v2.2.1
+      uses: rtCamp/action-slack-notify@v2.3.0
       env:
         SLACK_ICON: http://github.com/chainguardian.png?size=48
         SLACK_USERNAME: chainguardian
